@@ -16,6 +16,7 @@ function CelebritiesPage () {
             {shittyStars.map((star) => {
 
                 return (
+                    //je rapelle la page qui contiens la props
                     <CelebrityCard starCards={star}/>
                 )
             })}
