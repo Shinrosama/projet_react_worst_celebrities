@@ -43,6 +43,9 @@ function Header ({curentPage} ) {
                          )
                         }
                     </li>
+                    <li>
+                        <Link to= "/tvspeaker">TV speaker</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
