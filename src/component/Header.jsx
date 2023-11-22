@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import HomePage from "../pages/HomePage";
+import CelebritiesPage from "../pages/CelebritiesPage";
 
-function Header () {
+function Header ({curentPage} ) {
 
     return (
 
@@ -8,12 +10,38 @@ function Header () {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        {curentPage === "home" ? (
+                        <strong>
+                            <Link to="/">Home</Link>
+                        </strong>
+                        ) : (
+                            <Link to="/">Home</Link>
+
+                        )
+                    }
                     </li>
                     <li>
-                        <Link to = "/celebrities">Celebrity</Link></li>
+                        {curentPage === "celebrities" ? (
+                        <strong>
+                            <Link to = "/celebrities">Celebrity</Link>
+                        </strong>
+                    
+                        ) : (
+
+                            <Link to = "/celebrities">Celebrity</Link>
+                        )
+                    }
+                    </li>
                     <li>
-                        <Link to= "/randomcelebrity" >Random Celebrity</Link>
+                        {curentPage === "random" ? (
+                       
+                        <strong>
+                            <Link to= "/randomcelebrity" >Random Celebrity</Link>
+                        </strong>
+                         ) : (
+                            <Link to= "/randomcelebrity" >Random Celebrity</Link>
+                         )
+                        }
                     </li>
                 </ul>
             </nav>

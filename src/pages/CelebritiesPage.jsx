@@ -12,7 +12,7 @@ function CelebritiesPage () {
 
     return (
         <main>
-            <Header/>
+            <Header curentPage="Celebrities"/>
             {shittyStars.map((star) => {
 
                 return (

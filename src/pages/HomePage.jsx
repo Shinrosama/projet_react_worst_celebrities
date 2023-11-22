@@ -65,7 +65,7 @@ function HomePage () {
 
     return (
         <main>
-            <Header/>
+            <Header curentPage="home"/>
             <section>
                 <h2>Last celebrities :</h2>
                 {lastShitystrars.map((star) => {
