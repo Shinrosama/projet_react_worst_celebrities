@@ -28,21 +28,35 @@ function CocktailPage () {
         //le console log sert a voir si on a récupéré le fichier lisible par js 
         console.log(cocktailsInJs);
         // on demande de stocker la valeur et de recharger le composant 
-        setCoctails (cocktailsInJs);
+        setCoctails (cocktailsInJs.drinks);
     });
 
 }
 
     return (
-    <main>
-        {/* on retourne article si on a bien charger le document */}
-        {cocktails ?
-        <article>cocktails prêts</article>
-        // on affiche le p tant que le document n'est pas chargé
-        : <p>cocktails en cours de préparation</p>    
-    }
-    </main>
-    )
+        <main>
+
+            {/* si on a chargé le document alors il affiche ce qui suit */}
+            {cocktails ? (
+                <>
+                {/* je veut parcourir mon objet */}
+                    {cocktails.map((cocktail) => {
+                    return (
+                        // je demande d'afficher les noms cocktails présents dans le tableau
+                        <article>
+                            <h2>{cocktail.strDrink} </h2>
+                        </article>
+                    );
+                    })}
+                </>
+            ) : (
+                // tant que le chargement n'est pas terminé il affichera le p
+                <p>cocktail chargement</p>
+            )}
+        </main>
+
+    );
 }
+
 
 export default CocktailPage;
