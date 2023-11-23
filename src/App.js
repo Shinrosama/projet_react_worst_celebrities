@@ -11,6 +11,8 @@ import FormMessagePage from './pages/FormMessagePage';
 import LikesPage from './pages/LikesPage';
 import LikeNewPage from './pages/LikeNewPage';
 
+import CocktailPage from './pages/CocktailPage';
+
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
           <Route path="/formmessage" element= {<FormMessagePage/>} />
           <Route path="/like" element= {<LikesPage/>} />
           <Route path="/likenew" element= {<LikeNewPage/>} />
+          <Route path="/cocktail" element= {<CocktailPage/>} />
         </Routes>
       </BrowserRouter>
     </>
