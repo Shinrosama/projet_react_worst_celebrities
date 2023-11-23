@@ -5,8 +5,10 @@ function LikeNewPage () {
     const [likeNew, setlikeNew] = useState(0);
 
         const handleLikeNewClick = () => {
+            
 
             setlikeNew (likeNew +1);
+
         }
 
     return (
