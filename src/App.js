@@ -8,6 +8,8 @@ import CelebryDetailPage from './pages/CelebrityDetailPage';
 import TvSpeakersPage from './pages/TvSpeakersPage';
 import CopyrightPage from './pages/CopyrightPage';
 import FormMessagePage from './pages/FormMessagePage';
+import LikesPage from './pages/LikesPage';
+import LikeNewPage from './pages/LikeNewPage';
 
 
 
@@ -23,6 +25,8 @@ function App() {
           <Route path="/tvspeaker" element= {<TvSpeakersPage/>} />
           <Route path="/copyright" element= {<CopyrightPage/>} />
           <Route path="/formmessage" element= {<FormMessagePage/>} />
+          <Route path="/like" element= {<LikesPage/>} />
+          <Route path="/likenew" element= {<LikeNewPage/>} />
         </Routes>
       </BrowserRouter>
     </>
